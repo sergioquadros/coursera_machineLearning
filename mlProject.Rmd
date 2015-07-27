@@ -1,15 +1,19 @@
 ---
 title: 'Machine Learning: HAR Project Classifier'
 author: "Sergio Quadros"
-date: "26 de julho de 2015"
+date: "2015/07/26"
 output:
   html_document:
     fig_caption: yes
     fig_height: 7
+    highlight: textmate
+    keep_md: yes
+    theme: spacelab
   pdf_document:
     fig_caption: yes
     keep_tex: yes
-    latex_engine: xelatex
+  word_document:
+    highlight: kate
 ---
 
 ```{r libraries,message=FALSE,echo=TRUE}
