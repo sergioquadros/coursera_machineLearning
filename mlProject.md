@@ -1,7 +1,6 @@
-# Wearable Computing: HAR Classifier with Machine Learning
+# Machine Learning: HAR Project Classifier
 Sergio Quadros  
-2015/07/25  
-
+2015/07/26  
 
 
 ```r
@@ -57,7 +56,7 @@ training %<>% select(c(index_cor,final))
 testing %<>% select(c(index_cor,final))
 ```
 
-I made the predicting with _Random Forest_ algorithm in _caret_ package with K-fold equals 10 and repeated five times; the optimistic estimate of accuracy with cross validation into training set is 0.75 +/- 0.07 (errors' range between 19.0% and 26.8%), see below:
+I made the predicting with _Random Forest_ algorithm in _caret_ package with K-fold equals 10 and repeated five times; the optimistic estimate of accuracy with cross validation into training set is 0.75 $\pm $ 0.07 (errors' range between 19.0% and 26.8%), see below:
 
 
 ```r
@@ -142,7 +141,7 @@ colnames(training[,c(42,4,22,14)])
 ## [4] "stddev_roll_belt"
 ```
 
-The observed classifier accuracy is 99.4% for authors in [1], [2] and [3], our estimate by cross validation is 75%+/-7% into training set.
+The observed classifier accuracy is 99.4% for authors in [1], [2] and [3], our estimate by cross validation is 75% $\pm $ 7% into training set.
 
 # References  
 
