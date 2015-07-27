@@ -1,26 +1,16 @@
 ---
-title: 'Wearable Computing: HAR Classifier with Machine Learning'
+title: 'Machine Learning: HAR Project Classifier'
 author: "Sergio Quadros"
-date: "2015/07/25"
+date: "26 de julho de 2015"
 output:
   html_document:
-    pandoc_args: [
-      "+RTS", "-K64m",
-      "-RTS"
-    ]
     fig_caption: yes
-    fig_height: 8
-    fig_width: 8
-    keep_md: yes
-    
+    fig_height: 7
   pdf_document:
     fig_caption: yes
-    fig_height: 3
-    fig_width: 2
     keep_tex: yes
     latex_engine: xelatex
 ---
-
 
 ```{r libraries,message=FALSE,echo=TRUE}
 library(knitr);library(rmarkdown);library(grid);library(caret);library(xtable)
@@ -73,7 +63,7 @@ training %<>% select(c(index_cor,final))
 testing %<>% select(c(index_cor,final))
 ```
 
-I made the predicting with _Random Forest_ algorithm in _caret_ package with K-fold equals 10 and repeated five times; the optimistic estimate of accuracy with cross validation into training set is 0.75 +/- 0.07 (errors' range between 19.0% and 26.8%), see below:
+I made the predicting with _Random Forest_ algorithm in _caret_ package with K-fold equals 10 and repeated five times; the optimistic estimate of accuracy with cross validation into training set is 0.75 $\pm $ 0.07 (errors' range between 19.0% and 26.8%), see below:
 
 ```{r predicting,message=FALSE,echo=TRUE}
 set.seed(133162)
@@ -101,7 +91,7 @@ featurePlot(x = training[,c(42,4,22,14)],
 colnames(training[,c(42,4,22,14)])
 ```
 
-The observed classifier accuracy is 99.4% for authors in [1], [2] and [3], our estimate by cross validation is 75%+/-7% into training set.
+The observed classifier accuracy is 99.4% for authors in [1], [2] and [3], our estimate by cross validation is 75% $\pm $ 7% into training set.
 
 # References  
 
